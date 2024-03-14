@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str=prompt("enter a string")
+        var s=Array.from(str)
+        vowel_arr=['a','e','i','o','u','A','E','I','O','U']
+        c=0
+        for(let i of s)
+        {
+            for(let j of vowel_arr)
+            {
+                if(i==j || i.toUpperCase==j)
+                c++
+            }
+           
+        }
+
+        document.write("total vowels in "+str+":"+c)
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a=["lucky","yamuna","ravi","ram","padma","bujji","raji","samba","subbu","ranga"]
+        let b=[69,21,23,40,33,50,45,54,3,26]
+
+        a.pop()
+        document.write(a+"<br>")
+        a.push("lucky")
+        document.write(a+"<br>")
+        a.shift()
+        document.write(a+"<br>")
+        a.unshift("ranga")
+        document.write(a+"<br>")
+        a.splice(2,0,"rahul")
+        document.write(a+"<br>")
+        r=a.slice(1,3)
+        document.write(r+"<br>")
+        document.write(a.join("-")+"<br>")
+        document.write(a.sort()+"<br>")
+        document.write(b.sort()+"<br>")
+        document.write(a.sort().reverse()+"<br>")
+        document.write(b.sort((x,y)=>x-y)+"<br>")
+        document.write(b.sort((x,y)=>y-x)+"<br>")
+        document.write(a.concat(b)+"<br>")
+    </script>
+    
+</body>
+</html>

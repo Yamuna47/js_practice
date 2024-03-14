@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        sum=0
+        for(let i=2;i<=50;i++)
+        {
+            for(j=2;j<i;j++)
+            {
+                if(i%j==0)
+                    break
+            }
+            if(j==i)
+                sum=sum+i
+        }
+        document.write("sum of 1-50 prime numbers:"+sum)
+    </script>
+    
+</body>
+</html>

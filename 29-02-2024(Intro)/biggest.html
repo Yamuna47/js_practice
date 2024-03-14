@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biggest number</title>
+</head>
+<body>
+    <script>
+        //write a javascript program to print biggest of 4 numbers 
+        document.write("<p>First method:-<i>Using If-Else </i></p>");
+        var number1 = parseInt(prompt("Enter first number"));
+        var number2 = parseInt(prompt("Enter second number"));
+        var number3 = parseInt(prompt("Enter third number"));
+        var number4 = parseInt(prompt("Enter fourth number"));
+
+        if(number1>number2)
+        {
+            if(number1>number3)
+            {
+                if(number1>number4)
+                {
+                    document.write(`${number1} is Biggest number`);
+                }
+                else
+                {
+                    document.write(`${number4} is Biggest number`);
+                }
+            }
+            else{
+                if(number3>number4)
+                {
+                    document.write(`${number3} is Biggest number`);
+                }
+                else
+                {
+                    document.write(`${number4} is Biggest number`);
+                }
+            }
+        }
+        else
+        {
+            if(number2>number3)
+            {
+                if(number2>number4)
+                {
+                    document.write(`${number2} is Biggest number`);
+                }
+                else
+                {
+                    document.write(`${number4} is Biggest number`);
+                }
+            }
+            else
+            {
+            if(number3>number4)
+            {
+                document.write(`${number3} is Biggest number`);
+            }
+            else
+            {
+                document.write(`${number4} is Biggest number`);
+            }
+        }
+    
+    }
+
+    </script>
+</body>
+</html>
