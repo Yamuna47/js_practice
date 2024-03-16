@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+<style>
+    body{
+        background-color:rgb(222, 219, 219);
+    }
+    .fm{
+        margin-left:550px;
+        margin-top:60px;
+        padding:15px;
+        border:1px solid black;
+        border-top-right-radius:25px;
+        border-bottom-left-radius:25px;
+        width:280px;
+        box-shadow: 5px 5px 5px 5px lightgrey;
+        background-color: rgb(218, 250, 239);
+        position:absolute;
+        z-index: 10;
+        background: transparent;
+    }
+
+    input{
+        width:250px;
+        padding:5px;
+        height:20px;
+        margin-top: 20px;
+        margin-left: 10px;
+        border-radius: 7px;
+        border:1px solid black;
+        background-color: #E3E3E1;
+        color:red;
+
+    }
+    input:hover{
+        border-color:blue;
+    }
+    label{
+        border-width:250px;
+        height:20px;
+        margin-top:10px;
+        margin-left:20px;
+        color:blue;
+    }
+    select{
+        width:120px;
+        padding:5px;
+        height:30px;
+        margin-top: 30px;
+        margin-left: 10px;
+        border-radius: 5px;
+        border:1px solid lightgrey;
+    }
+    select:hover{
+        border-color:blueviolet;
+    }
+    button{
+        margin-top: 20px;
+        margin-left:65px;
+        width:150px;
+        height:35px;
+        border-radius: 15px;
+        background-color:rgb(118, 195, 234);
+    }
+    button:hover{
+        border-color: blue;
+    }
+    img{
+        position:absolute;
+        top:60px;
+        left:150px;    
+    }
+    h1{
+        margin-left:370px;
+        color:green;
+    }
+    .i{
+        border:1px solid black;
+        height:470px;
+        width:850px;
+        position:absolute;
+        top:80px;
+        left:150px;
+        background-image:url('https://images.pexels.com/photos/210600/pexels-photo-210600.jpeg?auto=compress&cs=tinysrgb&w=600');
+        background-repeat: no-repeat; 
+        background-size: 850px;
+        border-radius: 5px;
+            
+    }
+</style>
+</head>
+<body> 
+    <h1>Bank Fixed Deposite Details</h1>
+    <div class="fm">
+    <form onsubmit="fd()">
+        <input type="text" placeholder="username" id="uname" required><br>
+        <input type="number" placeholder="Age" id="age" required><br>
+        <input type="number" placeholder="Amount" id="amt" required><br>
+        <input type="number" placeholder="Tenure" id="time" required><br>
+        <label><b>Select Your Bank:</b></label>
+        <select id="bank" required>
+            <option>---Select---</option>
+            <option>SBI Bank</option>
+            <option>Canara Bank</option>
+            <option>RBI Bank</option>
+            <option>IOB Bank</option>
+            <option>Overseas Bank</option>
+        </select><br>
+        <button type="submit">FD Calculate</button>
+    </form>
+</div>
+
+<div class="i">
+
+</div>
+
+
+
+    <script>
+        //<img src="bank.png" width="300" height="400">
+        //<img src="bankplant.png" width="200" height="300">
+        function fd(){
+        var age=document.getElementById("age").value;
+        var amt=document.getElementById("amt").value;
+        var time=document.getElementById("time").value;
+        var uname=document.getElementById("uname").value;
+        var bank=document.getElementById("bank").value;
+            //SBI: if age>60,roi=10%; gst=0 otherwise roi=5%;gst=2% 
+            //Canara:if age>60,roi=6%; gst=0 otherwise roi=7%;gst=3%
+            //RBI:if age>60,roi=3%; gst=0 otherwise roi=7%;gst=5%
+            //IOB:if age>60,roi=9%; gst=0 otherwise roi=6%;gst=2%
+            //Overseas:if age>60,roi=7%; gst=0 otherwise roi=8%;gst=1%
+
+       //SBI Bank     
+
+    if(bank=="SBI Bank")
+    {
+        if(age>60)
+        {
+            var interest=parseInt((amt*time*10)/100)
+            document.write(uname+" Your Maturity amount is"+(interest+parseInt(amt)))
+        }
+        else
+        {
+            var interest=parseInt((amt*time*5)/100)
+            gst=(2/100)*interest
+            interest=interest-gst
+            document.write(uname+" Your Maturity amount is"+(interest+parseInt(amt)))
+        }
+    }
+
+    //Canara Bank
+
+    if(bank=="Canara Bank")
+    {
+        if(age>60)
+        {
+            var interest=parseInt((amt*time*6)/100)
+            document.write(uname+" Your Maturity amount is"+(interest+parseInt(amt)))
+        }
+        else
+        {
+            var interest=parseInt((amt*time*5)/100)
+            gst=(3/100)*interest
+            interest=interest-gst
+            document.write(uname+" Your Maturity amount is"+(interest+parseInt(amt)))
+        }
+    }
+
+
+    //RBI Bank
+
+    if(bank=="RBI Bank")
+    {
+        if(age>60)
+        {
+            var interest=parseInt((amt*time*3)/100)
+            document.write(uname+" Your Maturity amount is"+(interest+parseInt(amt)))
+        }
+        else
+        {
+            var interest=parseInt((amt*time*5)/100)
+            gst=(5/100)*interest
+            interest=interest-gst
+            document.write(uname+" Your Maturity amount is"+(interest+parseInt(amt)))
+        }
+    }
+
+    //IOB Bank
+
+    if(bank=="IOB Bank")
+    {
+        if(age>60)
+        {
+            var interest=parseInt((amt*time*9)/100)
+            document.write(uname+" Your Maturity amount is"+(interest+parseInt(amt)))
+        }
+        else
+        {
+            var interest=parseInt((amt*time*5)/100)
+            gst=(2/100)*interest
+            interest=interest-gst
+            document.write(uname+" Your Maturity amount is"+(interest+parseInt(amt)))
+        }
+    }
+
+    //Overseas Bank
+
+    if(bank=="Overseas Bank")
+    {
+        if(age>60)
+        {
+            var interest=parseInt((amt*time*7)/100)
+            document.write(uname+" Your Maturity amount is"+(interest+parseInt(amt)))
+        }
+        else
+        {
+            var interest=parseInt((amt*time*5)/100)
+            gst=(1/100)*interest
+            interest=interest-gst
+            document.write(uname+" Your Maturity amount is"+(interest+parseInt(amt)))
+        }
+    }
+
+    }
+    </script>
+    
+</body>
+</html>

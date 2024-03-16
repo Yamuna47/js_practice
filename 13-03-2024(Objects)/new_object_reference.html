@@ -7,19 +7,20 @@
 </head>
 <body>
     <script>
-        var seasonfruits={
-            summer:"mango",
-            rainy:"berrys",
-            winter:"custard apple",
-            spring:"limes"
-        }
+        //new object reference
+         var seasonfruits=new Object();
+         seasonfruits.summer="mango"
+         seasonfruits.rainy="berrys"
+         seasonfruits.winter="custard apple"
+         seasonfruits.spring="limes"
+        
         document.write((typeof(seasonfruits))+"<br>")
 
        for(let s in seasonfruits)
             {
                 document.write(s+":"+seasonfruits[s]+"<br>")
             }
-        document.write(seasonfruits.summer);
+        
     </script>
     
 </body>

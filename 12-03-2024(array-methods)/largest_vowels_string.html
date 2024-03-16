@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let words=["yamuna rani","padma vathi","raji","subbayamma","chandra shekar","rameswarara rao","ravi shankar"]
+        vowel_arr=['a','e','i','o','u','A','E','I','O','U']
+        cntarr=[]
+        
+        for(let a of words)
+        {
+            c=0
+        for(let i of a)
+        {
+            for(let j of vowel_arr)
+            {
+                if(i==j || i.toUpperCase==j)
+                c++
+            }
+           
+        }
+        cntarr.push(c)
+        }
+    
+        big=cntarr[0]
+        for(let b of cntarr)
+        {
+            if(b>big)
+                big=b
+        }
+        ind=cntarr.indexOf(big)
+
+        document.write(words[ind])
+
+    </script>
+    
+</body>
+</html>

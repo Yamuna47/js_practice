@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var uname=prompt("enter your name:");
+        var pwd=prompt("enter password")
+
+        var ourpw=uname.slice(0,3)+"123"
+
+        if(pwd==ourpw)
+            document.write("Login Successful")
+        else
+            document.write("Login Failed")
+    </script>
+    
+</body>
+</html>

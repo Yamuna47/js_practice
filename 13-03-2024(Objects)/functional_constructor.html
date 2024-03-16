@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function  seasonfruits(summer,rainy,winter,spring){
+            this.summer=summer;////this refers to local variables
+            this.rainy=rainy;
+            this.winter=winter;
+            this.spring=spring;
+        }
+        let s1=new seasonfruits("mango","fiberstick","custard apple","sapota");
+        let s2=new seasonfruits("watermelon","berrys","orange","limes");
+        
+
+        let arr=[s1,s2]//to iterate all the objects we need to make those as an Array
+
+       /* for(let s in s1)
+            document.write(s+":"+s1[s]+"<br>");
+        document.write("----------------<br>")     //iterating seperately
+        for(let s in s2)
+            document.write(s+":"+s2[s]+"<br>");*/
+
+
+        for(let a of arr)
+        {
+            for(let b in a)
+            {   
+                document.write(b+":"+a[b]+"<br>")    //iterating multiple objects using array
+            }
+            document.write("---------------<br>")
+        }
+    </script>
+    
+</body>
+</html>

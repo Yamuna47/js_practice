@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str="Kagga Yamuna Rani from Andhra Pradesh, Bapatla";
+        var str1="mom"; var str2=":wow"
+
+        document.write(str.toLowerCase()+"<br>")
+        document.write(str.toUpperCase()+"<br>")
+        document.write(str.slice(0,7)+"<br>")
+        document.write(str.substring(6,17)+"<br>")
+        document.write(str.substr(6,11)+"<br>")
+        var s1=str1.padStart(3,"*");
+        document.write(s1+"<br>")///not printing
+        var s2=str1.padEnd(2,"*")
+        document.write(s2+"<br>")//not printing
+        document.write(str1.concat(str2)+"<br>")
+        document.write(str1.repeat(3)+"<br>")
+        document.write(str.replace("Yamuna Rani","daughter")+"<br>")
+        document.write(str.indexOf("Rani")+"<br>")
+        document.write(str.lastIndexOf("a")+"<br>")
+        document.write(str.split(" ")+"<br>")
+        document.write(str.split(".")+"<br>")
+        document.write(str1.startsWith("m")+"<br>")
+        document.write(str1.startsWith("r")+"<br>")
+        document.write(str1.endsWith("m")+"<br>")
+        document.write(str1.endsWith("r")+"<br>")
+        document.write(str1.length)
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var s=new Set();
+        s.add(1)
+        s.add(7)
+        s.add(54)
+        s.add(17)
+        s.add(7)
+        s.add(15)
+        s.add(86)  //add: to add elements to the set ds
+        s.add(54)
+        s.add(15)
+
+        for(let a of s)
+        {
+            document.write(a+"<br>")
+        }
+
+        var arr=[...s]   //SPREAD(...) operator to convert ds to normal simple elements(array)
+                            //REST(...) operator to combine rest elements into one ds(array)
+        document.write(arr)
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var m=new Map();
+        m.set(1,"watermelon")
+        m.set("winter","custard apple")  //set: to set values to map ds
+        m.set(3,"berrys")
+        m.set(4,"limes")
+        m.set(1,"mango")
+
+        document.write(m.get(1)+"<br>")         //get: to retrieve values
+        document.write(m.get("winter")+"<br>")
+
+       for(let a of m)
+        {
+            document.write(a+"<br>")
+        }
+
+
+    </script>
+    
+</body>
+</html>
